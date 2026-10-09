@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { PrismaPg } from '@prisma/adapter-pg';
 import { PrismaClient } from '@prisma/client';
+import { FeedbacksController } from './controllers/feedbacks.controller.js';
 import { FeedbacksService } from './services/feedbacks.service.js';
 
 const prismaProvider = {
@@ -18,6 +19,7 @@ const prismaProvider = {
 };
 
 @Module({
+  controllers: [FeedbacksController],
   providers: [FeedbacksService, prismaProvider],
 })
 export class FeedbacksModule {}
