@@ -5,6 +5,7 @@ import {
   Param,
   ParseIntPipe,
   Post,
+  ValidationPipe,
 } from '@nestjs/common';
 
 import { PostFeedbackDto } from '../dtos/post-feedback.dto.js';
